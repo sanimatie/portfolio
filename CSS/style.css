@@ -1,0 +1,126 @@
+html, body {
+  background-color: rgb(var(--background));
+  margin: 20px;
+}
+
+/*typografie*/
+h1, h2 {
+  font-family: Belleza, sans-serif;
+  color: rgb(var(--background));
+  margin: 0;
+  text-shadow: -1px -1px black;
+}
+
+h1 {
+  font-size: 100px;
+  text-align: center;
+}
+
+p, a{
+ font-family: Lato, sans-serif;
+ font-size: 20px;
+ text-align: center;
+ text-decoration: none;
+ color: rgb(var(--background));
+}
+
+#projects p {
+  font-family: Merienda, sans-serif;
+  font-size: 30px;
+}
+
+/*colors*/
+:root {
+--background: 1,33,77;
+--accent: 233,157,198;
+--color1: 140,255,208; 
+}
+
+/*welcome*/
+#welcome-section {
+  position: relative;
+  background-color: rgba(var(--color1), 0.7);
+  grid-area: header;
+  padding: 0 10px 10px 10px;
+  margin-bottom: 10px;
+}
+
+/* projects grid*/
+#projects {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ grid-gap: 10px;
+  grid-template-areas:
+    "project1 project1 project2"
+    "project3 project4 project4";
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/*projecten*/
+
+#project1 {
+  grid-area: project1;
+}
+#project2 {
+  grid-area: project2;
+}
+
+#project3 {
+grid-area: project3;
+}
+
+#project4 {
+  grid-area: project4;
+}
+
+#project3 img {
+  object-position: top center;
+}
+
+.project-tile {
+background-color: rgba( var(--accent), 0.8);
+padding: 10px;
+  
+}
+
+.project-tile:hover {
+  background-color: rgba(var(--accent), 1);
+}
+
+.project-image {
+  height: 80%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top left;
+}
+
+@media (max-width: 955px){
+  body {
+    margin: 5px;
+  }
+  h1 {
+    font-size: 7vw;
+    padding-top: 10px;
+ 
+  }
+  p {
+    font-size: 15px;
+  }
+  #projects {
+    grid-template-areas:
+     "project1 project1 project1"
+     "project2 project2 project2"
+     "project4 project4 project4"
+     "project3 project3 project3";
+  }
+  
+  #projects p {
+    font-size: 5vw;
+  }
+  
+  .project-image {
+    height: auto;
+  }
+}
