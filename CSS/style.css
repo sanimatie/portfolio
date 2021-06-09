@@ -1,3 +1,10 @@
+/*colors*/
+:root {
+--background: 1,33,77;
+--accent: 233,157,198;
+--color1: 140,255,208; 
+}
+
 html, body {
   background-color: rgb(var(--background));
   margin: 20px;
@@ -23,17 +30,14 @@ p, a{
  color: rgb(var(--background));
 }
 
+.link:hover {
+	color: rgb(var(--accent));
+}
+
 #projects p, #projects a {
   font-family: Merienda, sans-serif;
   font-size: 30px;
   text-decoration: none;
-}
-
-/*colors*/
-:root {
---background: 1,33,77;
---accent: 233,157,198;
---color1: 140,255,208; 
 }
 
 /*welcome*/
@@ -96,9 +100,12 @@ padding: 10px;
   object-position: top left;
 }
 
+/*mobiele versie*/
 @media (max-width: 955px){
   body {
     margin: 5px;
+	/* disable de blauwe highlight als je iets selecteert*/
+	-webkit-tap-highlight-color:  transparent; 
   }
   h1 {
     font-size: 7vw;
