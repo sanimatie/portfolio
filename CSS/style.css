@@ -56,7 +56,8 @@ p, a{
  grid-gap: 10px;
   grid-template-areas:
     "project1 project1 project2"
-    "project3 project4 project4";
+    "project3 project4 project4"
+	"project5 project5 project5";
   white-space: nowrap;
   overflow: hidden;
 }
@@ -76,6 +77,10 @@ grid-area: project3;
 
 #project4 {
   grid-area: project4;
+}
+
+#project5 {
+grid-area: project5;
 }
 
 #project3 img {
@@ -119,8 +124,9 @@ padding: 10px;
     grid-template-areas:
      "project1 project1 project1"
      "project2 project2 project2"
-     "project4 project4 project4"
-     "project3 project3 project3";
+     "project3 project3 project3"
+	 "project5 project5 project5"
+	 "project4 project4 project4";
   }
   
   #projects p {
